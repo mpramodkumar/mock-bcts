@@ -1,2 +1,2 @@
-## Mock for Blockchain Trade and Supply Chain Finance Platform
+# ~Mock~ : Blockchain - Trade & Supply Chain Finance Platform
 
