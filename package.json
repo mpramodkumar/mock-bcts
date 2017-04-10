@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/CognizantStudio/mock-bc-tsf/issues"
   },
-  "homepage": "https://github.com/CognizantStudio/mock-bc-tsf#readme"
+  "homepage": "https://github.com/CognizantStudio/mock-bc-tsf#readme",
+  "dependencies": {
+    "harp": "^0.23.0"
+  }
 }
