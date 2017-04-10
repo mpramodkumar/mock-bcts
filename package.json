@@ -1,0 +1,23 @@
+{
+  "name": "mock-bc-tsf",
+  "version": "1.0.0",
+  "description": "Accelerator Mock Project",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run clear_compile && harp compile src www",
+    "clear_compile": "rm -rf www",
+    "postinstall": "npm run build",
+    "start": "harp server src",
+    "lint": "eslint src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/CognizantStudio/mock-bc-tsf.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CognizantStudio/mock-bc-tsf/issues"
+  },
+  "homepage": "https://github.com/CognizantStudio/mock-bc-tsf#readme"
+}
