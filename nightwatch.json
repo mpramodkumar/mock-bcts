@@ -14,12 +14,15 @@
 
   "test_settings" : {
     "default" : {
-      "launch_url" : "http://localhost",
+      "launch_url" : "http://127.0.0.1",
       "selenium_port"  : 4444,
-      "selenium_host"  : "localhost",
+      "selenium_host"  : "127.0.0.1",
       "screenshots" : {
-        "enabled" : false,
-        "path" : ""
+        "enabled" : true,
+        "path" : "./test-screenshots"
+      },
+      "globals": {
+        "waitForConditionTimeout": 15000 // sometimes internet is slow so wait.
       },      
       "desiredCapabilities": {
         "browserName": "chrome",
