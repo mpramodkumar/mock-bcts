@@ -8,8 +8,8 @@ machine:
 dependencies:
     override:
         - npm install
-        - selenium-standalone install --drivers.chrome.version=2.28
     post:
+        - selenium-standalone install --drivers.chrome.version=2.28
         - selenium-standalone start:
              background: true
 test:
