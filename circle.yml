@@ -11,8 +11,7 @@ dependencies:
     post:
         - chmod 755 ./bin/selenium-server-standalone-3.3.1.jar
         - chmod 755 ./bin/chromedriver.exe
-        - 'java -jar ./bin/selenium-server-standalone-2.47.1.jar':
-              background: true
+        - java -jar ./bin/selenium-server-standalone-2.47.1.jar
 test:
   override:
     - npm run tests
