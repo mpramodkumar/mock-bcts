@@ -3,7 +3,7 @@
   "output_folder" : "reports",
 
   "selenium" : {
-    "start_process" : true,
+    "start_process" : false,
     "server_path" : "bin/selenium-server-standalone-3.3.1.jar",
     "log_path" : "",
     "port" : 4444,
@@ -17,13 +17,6 @@
       "launch_url" : "http://127.0.0.1",
       "selenium_port"  : 4444,
       "selenium_host"  : "127.0.0.1",
-      "screenshots" : {
-        "enabled" : true,
-        "path" : "./test-screenshots"
-      },
-      "globals": {
-        "waitForConditionTimeout": 15000 // sometimes internet is slow so wait.
-      },      
       "desiredCapabilities": {
         "browserName": "chrome",
         "javascriptEnabled": true,

@@ -12,6 +12,7 @@ dependencies:
     post:
         - chmod 755 ./bin/selenium-server-standalone-3.3.1.jar
         - chmod 755 ./bin/chromedriver.exe
+        - selenium-standalone install --drivers.chrome.version=2.15
         - selenium-standalone start
 test:
   override:
