@@ -6,9 +6,9 @@
   "scripts": {
     "build": "npm run clear_compile && harp compile src www",
     "clear_compile": "rm -rf www",
-    "postinstall": "npm run build",
+    "postinstall": "npm run build && node nightwatch.conf.js",
     "start": "harp server src",
-    "lint": "eslint src"
+    "test": "node_modules/.bin/nightwatch --config nightwatch.conf.js"
   },
   "repository": {
     "type": "git",
@@ -22,5 +22,9 @@
   "homepage": "https://github.com/CognizantStudio/mock-bc-tsf#readme",
   "dependencies": {
     "harp": "^0.23.0"
+  },
+  "devDependencies": {
+    "nightwatch": "^0.9.14",
+    "selenium-download": "^2.0.9"
   }
 }
