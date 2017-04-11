@@ -13,10 +13,10 @@ module.exports = {
     },
 
     'body visible' : function (client) {
-      client.waitForElementVisible('body',2000);
+      client.waitForElementVisible('body',20000);
     },
     
     'h1 visible' : function (client) {
-      client.waitForElementVisible('h1',2000);
+      client.waitForElementVisible('h1',20000);
     }
 }
