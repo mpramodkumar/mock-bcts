@@ -20,4 +20,4 @@ dependencies:
              background: true
 test:
   override:
-    - npm run tests
+    - npm run e2e
