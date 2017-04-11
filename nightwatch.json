@@ -8,7 +8,7 @@
     "log_path" : "",
     "port" : 4444,
     "cli_args" : {
-      "webdriver.chrome.driver" : "./bin/chromedriver.exe"
+      "webdriver.chrome.driver" : "./bin/chromedriver"
     }
   },
 
@@ -17,6 +17,10 @@
       "launch_url" : "http://localhost",
       "selenium_port"  : 4444,
       "selenium_host"  : "localhost",
+      "screenshots" : {
+        "enabled" : false,
+        "path" : ""
+      },      
       "desiredCapabilities": {
         "browserName": "chrome",
         "javascriptEnabled": true,
