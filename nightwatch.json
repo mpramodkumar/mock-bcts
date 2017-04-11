@@ -18,7 +18,7 @@
       "selenium_port"  : 4444,
       "selenium_host"  : "localhost",
       "desiredCapabilities": {
-        "platform":"WINDOWS",
+        "platform":"LINUX",
         "browserName": "chrome",
         "javascriptEnabled": true,
         "acceptSslCerts": true
