@@ -12,7 +12,7 @@ dependencies:
     post:
         - chmod 755 ./bin/selenium-server-standalone-3.3.1.jar
         - chmod 755 ./bin/chromedriver.exe
-        - selenium-standalone.start
+        - selenium-standalone start
 test:
   override:
     - npm run tests
