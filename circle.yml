@@ -1,7 +1,7 @@
 general:
   branches:
     only:
-      - bala-circleci # list of branches to build
+      - f/143302491-HTML-TDD-framework # list of branches to build
 machine:
   node:
     version: 6.9.2

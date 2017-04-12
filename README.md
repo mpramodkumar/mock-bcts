@@ -1,8 +1,12 @@
 ## _Mock_ : Blockchain - Trade & Supply Chain Finance Platform
 
-This project will be a single page HTML report about various aspects of the Launchpad idea - Blockchain - Trade & Supply Chain Finance Platform
+This __mock project__ will be a single page HTML report about various aspects of the Launchpad idea - Blockchain - Trade & Supply Chain Finance Platform
 
-The project uses express as the web server and a static HTML template using with boostrap.
+The project uses express as the web server and a static HTML built with boostrap.
+
+## Contributing
+
+Refer [here](https://github.com/CognizantStudio/mock-bcts/blob/add-contributing-guides/.github/CONTRIBUTING.md) to know more about the  commit comments, branching, naming, merging, pull requests, reviews etc.
 
 ## Getting started
 
@@ -71,8 +75,3 @@ selenium-standalone install --drivers.chrome.version=2.28
 selenium-standalone start
 npm run tests
 ```
-
-
-## GitHub Process
-
-Refer [here](https://github.com/CognizantStudio/mock-bcts/blob/add-contributing-guides/.github/CONTRIBUTING.md) to know more about the  commit comments, branching, naming, merging, pull requests, reviews etc.

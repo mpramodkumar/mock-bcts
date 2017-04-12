@@ -8,12 +8,12 @@
     "tests:dev": "nightwatch --config nightwatch-dev.json",
     "e2e": "concurrently \"node ./bin/www\" \"npm run tests:dev\" --kill-others --success first",
     "e2e:circleci": "concurrently \"node ./bin/www\" \"npm run tests\" --kill-others --success first",
-     "lint": "eslint src"
+    "lint": "eslint src"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/CognizantStudio/mock-bcts.git"
-  },  
+  },
   "dependencies": {
     "body-parser": "~1.17.1",
     "cookie-parser": "~1.4.3",
@@ -26,6 +26,7 @@
   "devDependencies": {
     "concurrently": "^3.4.0",
     "ejs-lint": "^0.3.0",
+    "eslint": "^3.19.0",
     "nightwatch": "^0.9.14",
     "wd": "^1.2.0"
   }
