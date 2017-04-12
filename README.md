@@ -26,7 +26,7 @@ npm start
 
 We would be following Test-driven-development (TDD) / Behaviour-driven-developement (BDD) for this project using Nightwatch
 
-Refer (here)[https://blog.risingstack.com/end-to-end-testing-with-nightwatch-js-node-js-at-scale/] to know more about Node Js end-to-end testing with Nightwatch.
+Refer [here](https://blog.risingstack.com/end-to-end-testing-with-nightwatch-js-node-js-at-scale/) to know more about Node Js end-to-end testing with Nightwatch.
 
 The test scripts will be placed in __tests__ folder
 
@@ -36,7 +36,7 @@ The test scripts will be placed in __tests__ folder
 refer [here](http://www.seleniumframework.com/cucumber-jvm-3/install-java-jdk/) 
 * Chrome version and selenium standalone server must be compatabile.
 * Suggest to use the latest stable version of Chrome.
-* ChromeDriver version >= 2.27 or >= 2.28 
+* ChromeDriver version be >= 2.27 or >= 2.28
 * Chrome version must be >= 55.0.2883.0
 * The necessary chromedriver and selenium jars are placed in the bin folder. This is only for local testing. For circleCI integration they aren't used.
 * nightwatch-dev.json is the configuration while  local testing
@@ -75,4 +75,4 @@ npm run tests
 
 ## GitHub Process
 
-Refer (here)[https://github.com/CognizantStudio/mock-bcts/blob/add-contributing-guides/.github/CONTRIBUTING.md to know more about the  commit comments, branching, naming, merging, pull requests, reviews etc.
+Refer [here](https://github.com/CognizantStudio/mock-bcts/blob/add-contributing-guides/.github/CONTRIBUTING.md) to know more about the  commit comments, branching, naming, merging, pull requests, reviews etc.
