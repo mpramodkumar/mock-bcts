@@ -6,16 +6,16 @@ The project uses express as the web server and a static HTML template using with
 
 You can clone this project locally. 
 
-## Getting started - Step 1 : Create a new project based on the QuickStart
+## Getting started
 
 Clone this repo into new project folder (e.g., `my-proj`).
 ```shell
-git clone https://github.com/CognizantStudio/mock-bcts.git  my-proj
-cd my-proj
+git clone https://github.com/CognizantStudio/mock-bcts.git  mock-bcts-proj
+cd mock-bcts-proj
 ```
 ### Install npm packages
 
-> See npm and nvm version notes above
+> Check for npm and nvm version. Preferred to have node version >= 6.9.X
 
 Install the npm packages described in the `package.json` and verify that it works:
 
@@ -23,7 +23,6 @@ Install the npm packages described in the `package.json` and verify that it work
 npm install
 npm start
 ```
-
 
 ### Testing
 
@@ -54,6 +53,20 @@ and launches selenium and then runs the `nightwatch` to execute the tests.
 The pass/fail test results appear at the bottom of the terminal window.
 
 Nightwatch generates a report under `reports` which is easier to read; this file is excluded from source control.
+
+## GitHub practices
+
+* Create separate branches for your work. Branch name can be in these formats
+     ** <<initials>>/us<<number>> : Eg:- vbalas/us1010
+     ** <<us>><<number>> : Eg :- us10101
+* DO NOT push any change to master directly. It has to go via pull requests only.
+* Commit more often. Before you commit make sure to run tests to keep sanctity.
+* Perform a rebase from master to get the latest from the master so that master is not way out of sync  
+* Merge your changes and resolve conflicts in any.
+* Push your branch to remote
+* Raise a pull request
+* Fix any review comments and perform the same iteration
+* Once the review is completed and agreed as final, the reviewer will merge to the master branch if no merge conflicts exists. In case of any merge conflicts, the developer will be informed to resolve them and merge to master.
 
 
 
