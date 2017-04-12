@@ -34,6 +34,10 @@ The test scripts will be placed in __tests__ folder
 
 * Our tests requires selenium and so you need to have JDK installed in your machine. If not, please
 refer [here](http://www.seleniumframework.com/cucumber-jvm-3/install-java-jdk/) 
+* Chrome version and selenium standalone server must be compatabile.
+* Suggest to use the latest stable version of Chrome.
+* ChromeDriver version >= 2.27 or >= 2.28 
+* Chrome version must be >= 55.0.2883.0
 * The necessary chromedriver and selenium jars are placed in the bin folder. This is only for local testing. For circleCI integration they aren't used.
 * nightwatch-dev.json is the configuration while  local testing
 * nightwatch.json is the configuration for circleCI tests
@@ -55,6 +59,19 @@ and launches selenium and then runs the `nightwatch` to execute the tests.
 The pass/fail test results appear at the bottom of the terminal window.
 
 Nightwatch generates a report under `reports` which is easier to read; this file is excluded from source control.
+
+## Alternative way to run E2E Tests
+
+In case of any issues in the earlier method of e2e, we suggest to run the selenium-standalone server manually and
+then execute the tests
+
+```shell
+npm install -g selenium-standalone
+selenium-standalone install --drivers.chrome.version=2.28
+selenium-standalone start
+npm run tests
+```
+
 
 ## GitHub practices
 
