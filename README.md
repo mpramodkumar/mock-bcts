@@ -67,7 +67,7 @@ Nightwatch generates a report under `reports` which is easier to read; this file
 ## Alternative way to run E2E Tests
 
 In case of any issues in the earlier method of e2e, we suggest to run the selenium-standalone server manually and
-then execute the tests
+then execute the tests. Also it was noticed that running the "cmd" in administrator mode crashes the chrome browser.
 
 ```shell
 npm install -g selenium-standalone
