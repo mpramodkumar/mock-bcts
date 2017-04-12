@@ -20,4 +20,4 @@ dependencies:
              background: true
 test:
   override:
-    - npm run e2e
+    - npm run e2e:circleci
