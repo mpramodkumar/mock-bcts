@@ -5,7 +5,9 @@
   "scripts": {
     "start": "node ./bin/www",
     "tests": "nightwatch --config nightwatch.json",
-    "e2e": "concurrently \"node ./bin/www\" \"npm run tests\" --kill-others --success first"
+    "tests:dev": "nightwatch --config nightwatch-dev.json",
+    "e2e": "concurrently \"node ./bin/www\" \"npm run tests:dev\" --kill-others --success first",
+    "e2e:circleci": "concurrently \"node ./bin/www\" \"npm run tests\" --kill-others --success first"
   },
   "dependencies": {
     "body-parser": "~1.17.1",
