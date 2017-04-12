@@ -73,16 +73,6 @@ npm run tests
 ```
 
 
-## GitHub practices
+## GitHub Process
 
-* Create separate branches for your work. Branch name can be in these formats
-     * {{initials>}}/us{{number}} : Eg:- vbalas/us1010
-     * {{us}}{{number}} : Eg :- us10101
-* DO NOT push any change to master directly. It has to go via pull requests only.
-* Commit more often. Before you commit make sure to run tests to keep sanctity.
-* Perform a rebase from master to get the latest from the master so that master is not way out of sync  
-* Merge your changes and resolve conflicts in any.
-* Push your branch to remote
-* Raise a pull request
-* Fix any review comments and perform the same iteration
-* Once the review is completed and agreed as final, the reviewer will merge to the master branch if no merge conflicts exists. In case of any merge conflicts, the developer will be informed to resolve them and merge to master.
+Refer (here)[https://github.com/CognizantStudio/mock-bcts/blob/add-contributing-guides/.github/CONTRIBUTING.md to know more about the  commit comments, branching, naming, merging, pull requests, reviews etc.
