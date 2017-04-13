@@ -13,17 +13,17 @@
  */
 /* Move down content because we have a fixed navbar that is 50px tall */
 body {
-  padding-top: 50px;
+  font: 16px var(--body-font);
   font-size: 1.5em;
   line-height: 2;
-  font: 16px var(--body-font);
+  padding-top: 50px;
 }
 
 h1 {
   margin-bottom: 20px;
 }
 
-#tabs li b {
+.tabs li b {
   padding-left: 0.5em;
 }
 
@@ -40,8 +40,8 @@ h1 {
  * Global add-ons
  */
 .sub-header {
-  padding-bottom: 10px;
   border-bottom: 1px solid var(--main-color);
+  padding-bottom: 10px;
 }
 
 /*
@@ -63,38 +63,38 @@ h1 {
 
 @media (min-width: 768px) {
   .sidebar {
-    position: fixed;
-    top: 51px;
-    bottom: 0;
-    left: 0;
-    z-index: 1000;
-    display: block;
-    padding: 20px;
-    overflow-x: hidden;
-    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
     background-color: var(--bg-color);
     border-right: 1px solid var(--main-color);
+    bottom: 0;
+    display: block;
+    left: 0;
 	  margin-top: 1.5em;
+    overflow-x: hidden;
+    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+    padding: 20px;
+    position: fixed;
+    top: 51px;
+    z-index: 1000;
   }
 }
 
 /* Sidebar navigation */
 .nav-sidebar {
-  margin-right: -21px; /* 20px padding + 1px border */
   margin-bottom: 20px;
   margin-left: -20px;
+  margin-right: -21px; /* 20px padding + 1px border */
 }
 
 .nav-sidebar > li > a {
-  padding-right: 20px;
   padding-left: 20px;
+  padding-right: 20px;
 }
 
 .nav-sidebar > .active > a,
 .nav-sidebar > .active > a:hover,
 .nav-sidebar > .active > a:focus {
-  color: var(--white-color);
   background-color: var(--nav-bg-color);
+  color: var(--white-color);
 }
 
 /*
@@ -107,9 +107,7 @@ h1 {
 
 @media (min-width: 768px) {
   .main {
-    padding-right: 40px;
-    padding-left: 40px;
-	  padding-top: 40px;
+    padding: 40px 40px 0;
   }
 }
 
@@ -118,38 +116,37 @@ h1 {
 }
 
 .scroll-top-wrapper {
-  position: fixed;
-  opacity: 0;
-  visibility: hidden;
-	overflow: hidden;
-	text-align: center;
-	z-index: 99999999;
   background-color: #777777;
+	border-radius: 10px;
+	bottom: 30px;
 	color: var(--main-color);
-	width: 50px;
 	height: 48px;
 	line-height: 48px;
+  opacity: 0;
+	overflow: hidden;
+  position: fixed;
 	right: 30px;
-	bottom: 30px;
-	padding-top: 2px;
-	border-radius: 10px;
-	-webkit-transition: all 0.5s ease-in-out;
+	text-align: center;
+	transition: all 0.5s ease-in-out;
 	-moz-transition: all 0.5s ease-in-out;
 	-ms-transition: all 0.5s ease-in-out;
 	-o-transition: all 0.5s ease-in-out;
-	transition: all 0.5s ease-in-out;
+	-webkit-transition: all 0.5s ease-in-out;
+  visibility: hidden;
+	width: 50px;
+	z-index: 99999999;
 }
 
 .scroll-top-wrapper:hover {
 	background-color: #888888;
 }
 
-.scroll-top-wrapper.show {
-  visibility:visible;
+.scroll-top-wrapper > .show {
   cursor:pointer;
 	opacity: 1.0;
+  visibility:visible;
 }
 
-.scroll-top-wrapper i.fa {
+.scroll-top-wrapper i > .fa {
 	line-height: inherit;
 }
