@@ -21,6 +21,7 @@
     "ejs": "~2.5.6",
     "express": "~4.15.2",
     "morgan": "~1.8.1",
+    "node-sass": "^4.5.2",
     "serve-favicon": "~2.4.2"
   },
   "devDependencies": {
@@ -29,6 +30,7 @@
     "ejs-lint": "^0.3.0",
     "eslint": "^3.19.0",
     "nightwatch": "^0.9.14",
+    "sass-lint": "^1.10.2",
     "wd": "^1.2.0"
   }
 }

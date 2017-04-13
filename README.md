@@ -75,3 +75,7 @@ selenium-standalone install --drivers.chrome.version=2.28
 selenium-standalone start
 npm run tests
 ```
+
+### Linting
+##### CSS
+We are using node-sass for our scss. To lint, run `sass-lint public/stylesheets/**.scss -v`.
