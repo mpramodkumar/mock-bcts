@@ -1,24 +1,35 @@
-module.exports = {  
-  
-  tags: ['blockchain','bcts','trade','supply chain finance','decentralized app'],
+module.exports = {
 
-  before: function(browser) {
-      console.log("Setting up...");
-      browser.url("http://localhost:3000");
-    },
+  tags: ['blockchain', 'bcts', 'trade', 'supply chain finance', 'decentralized app'],
 
-    after : function(browser) {
-      browser.end()
-      console.log("Closing down...");
-    },
+  before: function (browser) {
+    console.log("Setting up...");
+    browser.url("http://localhost:3000");
+  },
 
-    'body visible' : function (client) {
-      client.waitForElementVisible('body',5000);
-    },
+  after: function (browser) {
+    browser.end()
+    console.log("Closing down...");
+  },
+
+  'body visible': function (client) {
+    client.waitForElementVisible('body', 5000);
+  },
+
+  'has all the required links in left nav': function (client) {
+    var reqNavLinks = new Array("Overview",
+                                "Industry Players",
+                                "Competitive Analysis",
+                                "Industry Articles",
+                                "Technical Articles",
+                                "Glossary",
+                                "Code Spikes",
+                                "Implementation"
+                                );
     
-    'has any input text' : function (client) {
-      client.getText("#tabs", function(result) {
-           console.log(result.value);
-      });
-    }
+    reqNavLinks.forEach(function (navLink) {                               
+      client.expect.element(navLink, 'link text').to.be.present;
+    }); 
+  }
+
 }
