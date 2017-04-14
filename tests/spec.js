@@ -26,8 +26,8 @@ module.exports = {
                                 "Code Spikes",
                                 "Implementation"
                                 );
-    
-    reqNavLinks.forEach(function (navLink) {                               
+
+    reqNavLinks.forEach(function (navLink) {
       client.expect.element(navLink, 'link text').to.be.present;
     }); 
   },
@@ -36,9 +36,27 @@ module.exports = {
    client.expect.element('Glossary', 'link text').to.be.present;
   },
 
-  'Test for Technical articles tab click': function (client) {
+  'Test for Glossary tab click': function (client) {
    client.click('link text', 'Glossary');
    client.expect.element('#tab6 h2', 'css selector').text.to.contain('Glossary');
-  }
+  },
 
+  'Test for Industry Players tab': function (client) {
+    client.expect.element('Industry Players', 'link text').to.be.present;
+  },
+
+
+  'Test for Industry players tab click': function (client) {
+    client.click('link text', 'Industry Players');
+    client.expect.element('#tab2 h2', 'css selector').text.to.contain('Industry Players');
+  },
+
+  'Test for Technical articles tab': function(client) {
+   client.expect.element('Technical Articles', 'link text').to.be.present;
+  },
+
+ 'Test for Technical articles tab click': function(client) {
+   client.click('link text', 'Technical Articles');
+   client.expect.element('#tab5 h2', 'css selector').text.to.contain('Technical articles');
+  }
 }
