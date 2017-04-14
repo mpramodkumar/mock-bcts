@@ -1,231 +1,241 @@
 <!DOCTYPE html>
 <html lang="en">
 
-	<head>
-		<meta charset="utf-8">
-		<title>Mock BCTS</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="shortcut icon" href="/images/favicon.ico">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		<link rel="stylesheet" href="https://cloud.typenetwork.com/projects/657/fontface.css/" type="text/css" />
-		<link rel="stylesheet" href="/stylesheets/dashboard.css">
+<head>
+  <meta charset="utf-8">
+  <title>Mock BCTS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="/images/favicon.ico">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cloud.typenetwork.com/projects/657/fontface.css/" type="text/css" />
+  <link rel="stylesheet" href="/stylesheets/dashboard.css">
 
-		<script>
+  <script>
+    $(document).ready(function() {
 
-			$(document).ready(function () {
+      $('div[id^=tab]').hide();
+      $('#tab1').show();
 
-				$('div[id^=tab]').hide();
-				$('#tab1').show();
+      $('#tabs a').click(function() {
+        var tab_id = $(this).attr('data-section');
+        $('div[id^=tab]').hide();
+        $(tab_id).show();
+      });
 
-				$('#tabs a').click(function () {
-					var tab_id = $(this).attr('data-section');
-					$('div[id^=tab]').hide();
-					$(tab_id).show();
-				});
+      $(function() {
+        $(document).on('scroll', function() {
+          if ($(window).scrollTop() > 100) {
+            $('.scroll-top-wrapper').addClass('show');
+          } else {
+            $('.scroll-top-wrapper').removeClass('show');
+          }
+        });
 
-				$(function () {
-					$(document).on('scroll', function () {
-						if ($(window).scrollTop() > 100) {
-							$('.scroll-top-wrapper').addClass('show');
-						} else {
-							$('.scroll-top-wrapper').removeClass('show');
-						}
-					});
+        $('.scroll-top-wrapper').on('click', scrollToTop);
 
-					$('.scroll-top-wrapper').on('click', scrollToTop);
+      });
 
-				});
+      function scrollToTop() {
+        verticalOffset = typeof(verticalOffset) != 'undefined' ? verticalOffset : 0;
+        element = $('body');
+        offset = element.offset();
+        offsetTop = offset.top;
+        $('html, body').animate({
+          scrollTop: offsetTop
+        }, 500, 'linear');
+      }
 
-				function scrollToTop() {
-					verticalOffset = typeof (verticalOffset) != 'undefined' ? verticalOffset : 0;
-					element = $('body');
-					offset = element.offset();
-					offsetTop = offset.top;
-					$('html, body').animate({ scrollTop: offsetTop }, 500, 'linear');
-				}
+    });
+  </script>
+</head>
 
-			});
+<body>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="https://accelerator.cognizant.com">
+          <img src="/images/logo-accelerator-1x.wht.png" alt="Cognizant Accelerator">
+        </a>
+      </div>
+      <div class="text-center idea-header">
+        <h1>Blockchain - Trade and Supply Chain Finance</h1>
+      </div>
+    </div>
+  </nav>
 
-		</script>
-	</head>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-2 sidebar">
+        <ul id="tabs" class="nav nav-sidebar">
+          <li><a href="#" data-section="#tab1"><i class="glyphicon glyphicon-book"></i><b>Overview</b></a>
+          </li>
+          <li><a href="#" data-section="#tab2"><i class="glyphicon glyphicon-wrench"></i><b>Industry Players</b></a>
+          </li>
+          <li><a href="#" data-section="#tab3"><i class="glyphicon glyphicon-list-alt"></i><b>Competitive Analysis</b></a>
+          </li>
+          <li><a href="#" data-section="#tab4"><i class="glyphicon glyphicon-play-circle"></i><b>Industry Articles</b></a>
+          </li>
+          <li><a href="#" data-section="#tab5"><i class="glyphicon glyphicon-edit"></i><b>Technical Articles</b></a>
+          </li>
+          <li><a href="#" data-section="#tab6"><i class="glyphicon glyphicon-warning-sign"></i><b>Glossary</b></a>
+          </li>
+          <li><a href="#" data-section="#tab7"><i class="glyphicon glyphicon-certificate"></i><b>Implementation</b></a>
+          </li>
+          <li><a href="#" data-section="#tab8"><i class="glyphicon glyphicon-certificate"></i><b>Code Spikes</b></a>
+          </li>
+        </ul>
+      </div>
 
-	<body>
-		<nav class="navbar navbar-inverse navbar-fixed-top">
-			<div class="container-fluid">
-				<div class="navbar-header">
-					<a class="navbar-brand" href="https://accelerator.cognizant.com">
-						<img src="/images/logo-accelerator-1x.wht.png" alt="Cognizant Accelerator">
-					</a>
-				</div>
-				<div class="text-center idea-header">
-					<h1>Blockchain - Trade and Supply Chain Finance</h1>
-				</div>
-			</div>
-		</nav>
+      <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+        <div id="tab1">
+          <h2 class="page-header">Overview</h2>
+          <p>Content for Overview goes here
+          </p>
+        </div>
 
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-sm-2 sidebar">
-					<ul id="tabs" class="nav nav-sidebar">
-						<li><a href="#" data-section="#tab1"><i class="glyphicon glyphicon-book"></i><b>Overview</b></a></li>
-						<li><a href="#" data-section="#tab2"><i class="glyphicon glyphicon-wrench"></i><b>Industry Players</b></a></li>
-						<li><a href="#" data-section="#tab3"><i class="glyphicon glyphicon-list-alt"></i><b>Competitive Analysis</b></a></li>
-						<li><a href="#" data-section="#tab4"><i class="glyphicon glyphicon-play-circle"></i><b>Industry Articles</b></a></li>
-						<li><a href="#" data-section="#tab5"><i class="glyphicon glyphicon-edit"></i><b>Technical Articles</b></a></li>
-						<li><a href="#" data-section="#tab6"><i class="glyphicon glyphicon-warning-sign"></i><b>Glossary</b></a></li>
-						<li><a href="#" data-section="#tab7"><i class="glyphicon glyphicon-certificate"></i><b>Implementation</b></a></li>
-						<li><a href="#" data-section="#tab8"><i class="glyphicon glyphicon-certificate"></i><b>Code Spikes</b></a></li>
-					</ul>
-				</div>
+        <div id="tab2">
+          <h2 class="page-header">Industry Players</h2>
+          <p>Content for Industry Players goes here
+          </p>
+        </div>
 
-				<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-					<div id="tab1">
-						<h2 class="page-header">Overview</h2>
-						<p>Content for Overview goes here
-						</p>
-					</div>
+        <div id="tab3">
+          <h2 class="page-header">Competitive Analysis</h2>
+          <p>Content for Competitive Analysis goes here
+          </p>
+        </div>
 
-					<div id="tab2">
-						<h2 class="page-header">Industry Players</h2>
-						<p>Content for Industry Players goes here
-						</p>
-					</div>
+        <div id="tab4">
+          <h2 class="page-header">Industry Articles</h2>
+          <p>Content for Industry Articles goes here
+          </p>
+        </div>
 
-					<div id="tab3">
-						<h2 class="page-header">Competitive Analysis</h2>
-						<p>Content for Competitive Analysis goes here
-						</p>
-					</div>
+        <div id="tab5">
+          <h2 class="page-header">Technical articles</h2>
+          <p>
+            <b>Blockchain Technology</b>
+            <br/>
+            <br/> A blockchain is a type of distributed ledger, comprised of unchangeable, digitally recorded data in packages called blocks. These digitally recorded "blocks" of data is stored in a linear chain. Each block in the chain contains data (e.g. bitcoin transaction), is cryptographically hashed. The blocks of hashed data draw upon the previous-block (which came before it) in the chain, ensuring all data in the overall "blockchain" has not been tampered with and remains unchanged
+          </p>
+          <div class="jumbotron">
+            <div class="container text-center">
+              <h3 class="page-header">Technologies Used For LaunchPad Project</h3>
+              <p class="lead"></p>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
 
-					<div id="tab4">
-						<h2 class="page-header">Industry Articles</h2>
-						<p>Content for Industry Articles goes here
-						</p>
-					</div>
+              <div class="col-md-4 well pricing-table">
+                <div class="pricing-table-holder">
+                  <center>
+                    <img src="/images/development_icon_100x100.jpg" class="img-responsive img-circle" alt="">
+                    <h3>DEVELOPMENT</h3>
+                    <p class="caption">
+                      Technologies used for development.
+                    </p>
+                  </center>
+                </div>
+                <div class="pricing-feature-list">
+                  <ul class="list-group">
+                    <li class="list-group-item">Angular2</li>
+                    <li class="list-group-item">React With Redux</li>
+                    <li class="list-group-item">Node JS</li>
+                    <li class="list-group-item">Ethereum</li>
+                    <li class="list-group-item">Express JS</li>
+                  </ul>
+                </div>
+                <div class="price-table-button-holder">
+                </div>
+              </div>
+              <div class="col-md-4 well pricing-table">
+                <div class="pricing-table-holder">
+                  <center>
+                    <img src="/images/devops_icon2_100x100.jpg" class="img-responsive img-circle" alt="">
+                    <h3>DEVOPS</h3>
+                    <p class="caption">
+                      Technologies used for devops.
+                    </p>
+                  </center>
+                </div>
+                <div class="pricing-feature-list">
+                  <ul class="list-group">
+                    <li class="list-group-item">Docker</li>
+                    <li class="list-group-item">Heroku</li>
+                    <li class="list-group-item">Circle CI</li>
+                    <li class="list-group-item">GIT</li>
+                    <li class="list-group-item">AWS</li>
+                  </ul>
+                </div>
+                <div class="price-table-button-holder">
+                </div>
+              </div>
+              <div class="col-md-4 well pricing-table">
+                <div class="pricing-table-holder">
+                  <center>
+                    <img src="/images/testing_icon_100x100.jpg" class="img-responsive img-circle" alt="">
+                    <h3>TESTING</h3>
+                    <p class="caption">
+                      Technologies used for testing.
+                    </p>
+                  </center>
+                </div>
+                <div class="pricing-feature-list">
+                  <ul class="list-group">
+                    <li class="list-group-item">Karma</li>
+                    <li class="list-group-item">Jasmine</li>
+                    <li class="list-group-item">Nightwatch JS</li>
+                    <li class="list-group-item">Selenium</li>
+                    <li class="list-group-item">Mocha</li>
+                  </ul>
+                </div>
+                <div class="price-table-button-holder">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-					<div id="tab5">
-						<h2 class="page-header">Technical articles</h2>
-	 		     <p>
-	 					    <b>Blockchain Technology</b><br/><br/>
-	 							A blockchain is a type of distributed ledger, comprised of unchangeable, digitally recorded data in packages called blocks.
-	 							These digitally recorded "blocks" of data is stored in a linear chain. Each block in the chain contains data (e.g. bitcoin transaction), is cryptographically hashed. The blocks of hashed data draw upon the previous-block (which came before it) in the chain, ensuring all data in the overall "blockchain" has not been tampered with and remains unchanged
-	 				 </p>
-	 	       <div class="jumbotron">
-	 					 <div class="container text-center">
-	 								<h3 class="page-header">Technologies Used For LaunchPad Project</h3>
-	 					      <p class="lead"></p>
-	 					 </div>
-	         </div>
-	 				  <div class="container">
-	 						 <div class="row">
+        <div id="tab6">
+          <h2 class="page-header">Glossary</h2>
+          <p>Content for Glossary goes here
+          </p>
+        </div>
 
-	 								 <div class="col-md-4 well pricing-table">
-	 										 <div class="pricing-table-holder">
-	 												 <center>
-	 														 <img src="/images/development_icon_100x100.jpg" class="img-responsive img-circle" alt="">
-	 														 <h3>DEVELOPMENT</h3>
-	 														 <p class="caption">
-	 																			 Technologies used for development.
-	 														 </p>
-	 												 </center>
-	 				             </div>
-	 				             <div class="pricing-feature-list">
-	 												 <ul class="list-group">
-	 														 <li class="list-group-item">Angular2</li>
-	 														 <li class="list-group-item">React With Redux</li>
-	 														 <li class="list-group-item">Node JS</li>
-	 														 <li class="list-group-item">Ethereum</li>
-	 														 <li class="list-group-item">Express JS</li>
-	 													 </ul>
-	 										 </div>
-	 				             <div class="price-table-button-holder">
-	 										</div>
-	 								 </div>
-	 								<div class="col-md-4 well pricing-table">
-	 										 <div class="pricing-table-holder">
-	 												 <center>
-	 														 <img src="/images/devops_icon2_100x100.jpg" class="img-responsive img-circle" alt="">
-	 														 <h3>DEVOPS</h3>
-	 														 <p class="caption">
-	 																		Technologies used for devops.
-	 														 </p>
-	 												 </center>
-	 				             </div>
-	 				             <div class="pricing-feature-list">
-	 												 <ul class="list-group">
-	 														 <li class="list-group-item">Docker</li>
-	 														 <li class="list-group-item">Heroku</li>
-	 														 <li class="list-group-item">Circle CI</li>
-	 														 <li class="list-group-item">GIT</li>
-	 														 <li class="list-group-item">AWS</li>
-	 													 </ul>
-	 										 </div>
-	 				             <div class="price-table-button-holder">
-	 										 </div>
-	 								 </div>
-	 								 <div class="col-md-4 well pricing-table">
-	 										 <div class="pricing-table-holder">
-	 												 <center>
-	 														 <img src="/images/testing_icon_100x100.jpg" class="img-responsive img-circle" alt="">
-	 														 <h3>TESTING</h3>
-	 														 <p class="caption">
-	 																	 Technologies used for testing.
-	 														 </p>
-	 												 </center>
-	 				           </div>
-	 				           <div class="pricing-feature-list">
-	 												 <ul class="list-group">
-	 														 <li class="list-group-item">Karma</li>
-	 														 <li class="list-group-item">Jasmine</li>
-	 														 <li class="list-group-item">Nightwatch JS</li>
-	 														 <li class="list-group-item">Selenium</li>
-	 														 <li class="list-group-item">Mocha</li>
-	 													 </ul>
-	 										 </div>
-	 				            <div class="price-table-button-holder">
-	 									  </div>
-	 								 </div>
-	 						 </div>
-	 				 </div>
-					</div>
+        <div id="tab7">
+          <h2 class="page-header">Implementation</h2>
+          <p>Content for Implementation goes here
+          </p>
+        </div>
 
-					<div id="tab6">
-						<h2 class="page-header">Glossary</h2>
-						<p>Content for Glossary goes here
-						</p>
-					</div>
+        <div id="tab8">
+          <h2 class="page-header">Code Spikes</h2>
+          <p>Content for Code Spikes goes here
+          </p>
+        </div>
+      </div>
+    </div>
 
-					<div id="tab7">
-						<h2 class="page-header">Implementation</h2>
-						<p>Content for Implementation goes here
-						</p>
-					</div>
-
-					<div id="tab8">
-						<h2 class="page-header">Code Spikes</h2>
-						<p>Content for Code Spikes goes here
-						</p>
-					</div>
-			</div>
-		</div>
-
-		<!-- The scroll to top feature -->
-		<div class="scroll-top-wrapper ">
-			<span class="scroll-top-inner">
+    <!-- The scroll to top feature -->
+    <div class="scroll-top-wrapper ">
+      <span class="scroll-top-inner">
 					<i class="fa fa-2x fa-arrow-circle-up"></i>
 				</span>
-		</div>
+    </div>
 
-		<div class="footer">
-			<div class="row">
-				<ul class="nav nav-pills nav-justified">
-					<li><a href="https://www.cognizant.com">©2017 Cognizant, all rights reserved</a></li>
-				</ul>
-			</div>
-		</div>
+    <div class="footer">
+      <div class="row">
+        <ul class="nav nav-pills nav-justified">
+          <li><a href="https://www.cognizant.com">©2017 Cognizant, all rights reserved</a>
+          </li>
+        </ul>
+      </div>
+    </div>
 
-	</body>
+</body>
+
 </html>
