@@ -153,3 +153,11 @@ h1 {
 .scroll-top-wrapper i.fa {
 	line-height: inherit;
 }
+
+.container {
+  width: 100% !important;
+}
+.jumbotron{
+  background: #f3f3f3 !important !important;;
+  width: 100% !important;
+}

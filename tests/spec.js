@@ -26,10 +26,17 @@ module.exports = {
                                 "Code Spikes",
                                 "Implementation"
                                 );
-    
-    reqNavLinks.forEach(function (navLink) {                               
-      client.expect.element(navLink, 'link text').to.be.present;
-    }); 
-  }
 
+    reqNavLinks.forEach(function (navLink) {
+      client.expect.element(navLink, 'link text').to.be.present;
+    });
+  },
+  'Test for Technical articles tab': function (client) {
+    client.expect.element('Technical Articles', 'link text').to.be.present;
+  },
+
+  'Test for Technical articles tab click': function (client) {
+    client.click('link text', 'Technical Articles');
+    client.expect.element('#tab5 h2', 'css selector').text.to.contain('Technical articles');
+  }
 }
