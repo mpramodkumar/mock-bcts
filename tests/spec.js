@@ -37,6 +37,49 @@ module.exports = {
       client.expect.element(navLink, 'link text').to.be.present;
     });
   },
+ 
+  'Test for Glossary': function (client) {
+   client.expect.element('Glossary', 'link text').to.be.present;
+  },
+
+  'Test for Glossary tab click': function (client) {
+   client.click('link text', 'Glossary');
+   client.expect.element('#tab6 h2', 'css selector').text.to.contain('Glossary');
+  },
+
+  'Test for Competitive Analysis tab click': function (client) {
+    client.click('link text', 'Competitive Analysis');
+    client.expect.element('#tab3 h2', 'css selector').text.to.contain('Competitive Analysis');
+  },
+
+  'Test for Industry Players tab': function (client) {
+    client.expect.element('Industry Players', 'link text').to.be.present;
+  },
+
+
+  'Test for Industry players tab click': function (client) {
+    client.click('link text', 'Industry Players');
+    client.expect.element('#tab2 h2', 'css selector').text.to.contain('Industry Players');
+  },
+
+  'Test for Technical articles tab': function(client) {
+   client.expect.element('Technical Articles', 'link text').to.be.present;
+  },
+
+ 'Test for Technical articles tab click': function(client) {
+   client.click('link text', 'Technical Articles');
+   client.expect.element('#tab5 h2', 'css selector').text.to.contain('Technical articles');
+  },
+  
+  // Test Case for Industry Articles
+ 'Test for Industry Articles tab': function (client) {
+   client.expect.element('Industry Articles', 'link text').to.be.present;
+  },
+
+ 'Test for Industry Articles tab click': function (client) {
+   client.click('link text', 'Industry Articles');
+   client.expect.element('#tab4 h2', 'css selector').text.to.contain('Industry Articles');
+  },
 
   'Test for Implementation link': function(client) {
     client.expect.element('Implementation', 'link text').to.be.present;
@@ -48,4 +91,6 @@ module.exports = {
       .element('#tab7 h2', 'css selector')
       .text.to.contain('Implementation');
   }
-};
+  
+}
+
