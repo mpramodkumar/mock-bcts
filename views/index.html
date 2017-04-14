@@ -14,19 +14,15 @@
 		<link rel="stylesheet" href="/stylesheets/dashboard.css">
 
 		<script>
-
 			$(document).ready(function () {
-
 				$('div[id^=tab]').hide();
 				$('#tab1').show();
-
 				$('#tabs a').click(function () {
 					scrollToTop();
 					var tab_id = $(this).attr('data-section');
 					$('div[id^=tab]').hide();
 					$(tab_id).show();
 				});
-
 				$(function () {
 					$(document).on('scroll', function () {
 						if ($(window).scrollTop() > 100) {
@@ -35,11 +31,8 @@
 							$('.scroll-top-wrapper').removeClass('show');
 						}
 					});
-
 					$('.scroll-top-wrapper').on('click', scrollToTop);
-
 				});
-
 				function scrollToTop() {
 					verticalOffset = typeof (verticalOffset) != 'undefined' ? verticalOffset : 0;
 					element = $('body');
@@ -47,9 +40,7 @@
 					offsetTop = offset.top;
 					$('html, body').animate({ scrollTop: offsetTop }, 500, 'linear');
 				}
-
 			});
-
 		</script>
 	</head>
 
@@ -139,10 +130,66 @@
 					</div>
 
 					<div id="tab4">
-						<h2 class="page-header">Industry Articles</h2>
-						<p>Content for Industry Articles goes here
-						</p>
-					</div>
+          <h2 class="page-header">Industry Articles</h2>
+          <p>
+            <h3>Supply Chain Overview:</h3>
+            A supply chain is a system of organizations, people, activities, information, and resources involved in moving a product
+            or service from supplier to customer. Supply chain activities involve the transformation of natural resources,
+            raw materials, and components into a finished product that is delivered to the end customer. In sophisticated
+            supply chain systems, used products may re-enter the supply chain at any point where residual value is recyclable.
+            For more details please refer to:
+            <a href="https://en.wikipedia.org/wiki/Supply_chain" data-section="#wiki_link">wiki link for supply chain</a>
+
+            <h3>Management:</h3>
+            In the 1980s, the term supply chain management (SCM) was developed to express the need to integrate the key business processes,
+            from end user through original suppliers. Original suppliers are those that provide products, services, and information
+            that add value for customers and other stakeholders. The basic idea behind SCM is that companies and corporations
+            involve themselves in a supply chain by exchanging information about market fluctuations and production capabilities.
+            If all relevant information is accessible to any relevant company, every company in the supply chain has the
+            ability to help optimize the entire supply chain rather than to sub-optimize based on a local interest. This
+            will lead to better-planned overall production and distribution, which can cut costs and give a more attractive
+            final product, leading to better sales and better overall results for the companies involved. Incorporating SCM
+            successfully leads to a new kind of competition on the global market, where competition is no longer of the company-versus-company
+            form but rather takes on a supply-chain-versus-supply-chain form. In commerce, supply chain management (SCM),
+            the management of the flow of goods and services, involves the movement and storage of raw materials, of work-in-process
+            inventory, and of finished goods from point of origin to point of consumption. Interconnected or interlinked
+            networks, channels and node businesses combine in the provision of products and services required by end customers
+            in a supply chain. Supply-chain management has been defined as the "design, planning, execution, control, and
+            monitoring of supply chain activities with the objective of creating net value, building a competitive infrastructure,
+            leveraging worldwide logistics, synchronizing supply with demand and measuring performance globally." For more
+            details please refer to: <a href="https://en.wikipedia.org/wiki/Supply_chain" data-section="#wiki_link_management">wiki link for supply chain management</a>
+
+            <h3>Trade and Supply chain financing:</h3>
+            Supply chain finance is a set of solutions that optimizes cash flow by allowing businesses to lengthen their payment terms
+            to their suppliers, while also providing an alternative option to their suppliers to get paid early. While minimizing
+            risk throughout the supply chain. Multiple participants need cash in different ways and different times. •
+            <ul>
+              <li>They negotiate to achieve better terms in order to reduce costs and manage working capital</li>
+              <li>Multiple financing solutions between buyers and suppliers</li>
+              <li>Improved credit rating for the buyer</li>
+              <li>Lower Financing costs for the supplier</li>
+            </ul>
+            <h3>Challenges faced:</h3>
+            There are various challenges faced by both buyer and supplier.
+
+            <h4>Supplier’s Challenge</h4>
+            <ul>
+              <li>Heavy expense for purchasing raw material.</li>
+              <li>Funding labour for production</li>
+              <li>Very long cash to cash cycles – 90 days from shipment to payment</li>
+              <li>Risk of buyer not paying</li>
+            </ul>
+
+
+            <h4>Buyer’s challenge</h4>
+            <ul>
+              <li>Risk of delay from inaccurate documentation.</li>
+              <li>Working capital tied up in long lead time and buffer inventory</li>
+              <li>Risk of supplier not delivering against terms and conditions.</li>
+            </ul>
+
+          </p>
+        </div>
 
           <div id="tab5">
             <h2 class="page-header">Technical articles</h2>
