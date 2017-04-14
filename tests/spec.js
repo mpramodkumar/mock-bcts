@@ -41,7 +41,6 @@ module.exports = {
  'Test for Industry Articles tab click': function (client) {
    client.click('link text', 'Industry Articles');
    client.expect.element('#tab4 h2', 'css selector').text.to.contain('Industry Articles');
-   client.expect.element('#tab4 p', 'css selector').text.to.contain('Supply Chain Overview:');
+   client.expect.element('#tab4 h3', 'css selector').text.to.contain('Supply Chain Overview:');
  }
-
 }
