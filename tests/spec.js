@@ -31,6 +31,7 @@ module.exports = {
       client.expect.element(navLink, 'link text').to.be.present;
     });
   },
+  
   'Test for Technical articles tab': function(client) {
     client.expect.element('Technical Articles', 'link text').to.be.present;
   },

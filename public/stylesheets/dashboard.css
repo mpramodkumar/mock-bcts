@@ -149,5 +149,6 @@ h1 {
 }
 .jumbotron {
     background: #fff;
+    height: 10px;
     width: 100% !important;
 }
