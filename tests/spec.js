@@ -29,12 +29,22 @@ module.exports = {
 
     reqNavLinks.forEach(function (navLink) {
       client.expect.element(navLink, 'link text').to.be.present;
-    });
+    }); 
+  },
+  
+  'Test for Glossary': function (client) {
+   client.expect.element('Glossary', 'link text').to.be.present;
+  },
+
+  'Test for Glossary tab click': function (client) {
+   client.click('link text', 'Glossary');
+   client.expect.element('#tab6 h2', 'css selector').text.to.contain('Glossary');
   },
 
   'Test for Industry Players tab': function (client) {
     client.expect.element('Industry Players', 'link text').to.be.present;
   },
+
 
   'Test for Industry players tab click': function (client) {
     client.click('link text', 'Industry Players');
