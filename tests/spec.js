@@ -37,10 +37,6 @@ module.exports = {
     client.expect.element('#tab3 h2', 'css selector').text.to.contain('Competitive Analysis');
   },
 
-  'check first column of catable contains Prime Revenue competitor': function (browser) {
-    browser.assert.containsText(".catable thead tr th:nth-child(2)", "Prime Revenue")
-  },
-  
   'Test for Industry Players tab': function (client) {
     client.expect.element('Industry Players', 'link text').to.be.present;
   },
