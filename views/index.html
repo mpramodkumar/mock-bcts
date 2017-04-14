@@ -21,6 +21,7 @@
 				$('#tab1').show();
 
 				$('#tabs a').click(function () {
+					scrollToTop();
 					var tab_id = $(this).attr('data-section');
 					$('div[id^=tab]').hide();
 					$(tab_id).show();
@@ -114,8 +115,417 @@
 
 					<div id="tab6">
 						<h2 class="page-header">Glossary</h2>
-						<p>Content for Glossary goes here
-						</p>
+						<nav class="navbar navbar-inverse">
+              <div class="container">
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                  <ul class="nav navbar-nav">
+                    <li><a href="#indexa">A</a></li>
+                    <li><a href="#indexb">B</a></li>
+                    <li><a href="#indexc">C</a></li>
+                    <li><a href="#indexd">D</a></li>
+                    <li><a href="#indexe">E</a></li>
+                    <li><a href="#indexf">F</a></li>
+                    <li><a href="#indexg">G</a></li>
+                    <li><a href="#indexh">H</a></li>
+                    <li><a href="#indexi">I</a></li>
+                    <li><a href="#indexj">J</a></li>
+                    <li><a href="#indexk">K</a></li>
+                    <li><a href="#indexl">L</a></li>
+                    <li><a href="#indexm">M</a></li>
+                    <li><a href="#indexn">N</a></li>
+                    <li><a href="#indexo">O</a></li>
+                    <li><a href="#indexp">P</a></li>
+                    <li><a href="#indexq">Q</a></li>
+                    <li><a href="#indexr">R</a></li>
+                    <li><a href="#indexs">S</a></li>
+                    <li><a href="#indext">T</a></li>
+                    <li><a href="#indexu">U</a></li>
+                    <li><a href="#indexv">V</a></li>
+                    <li><a href="#indexw">W</a></li>
+                    <li><a href="#indexx">X</a></li>
+                    <li><a href="#indexy">Y</a></li>
+                    <li><a href="#indexz">Z</a>
+                  </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+              </div>
+              <!-- /.container -->
+            </nav>
+
+            <!-- Page Content -->
+            <div class="container">
+              <hr class="featurette-divider">
+              <div class="featurette" id="indexa">
+                <h2><b>Address</b></h2>
+                <p>Addresses (Cryptocurrency addresses) are used to receive and send transactions on the network. An address is a string
+                  of alphanumeric characters, but can also be represented as a scannable QR code. </p>
+
+                <h2><b>Agreement Ledger</b></h2>
+                <p>An agreement ledger is distributed ledger used by two or more parties to negotiate and reach agreement. </p>
+
+                <h2><b>API</b></h2>
+                <p>API stands for application programming interface. It is a set of requirements that dictate how two pieces of software talk to each other. It is basically what allows you to move data between applications. </p>
+
+                <h2><b>Attestation Ledger</b></h2>
+                <p>A distributed ledger providing a durable record of agreements, commitments or statements, providing evidence (attestation)
+                  that these agreements, commitments or statements were made. </p>
+
+                <h2><b>ASIC</b></h2>
+                <p>ASIC is an acronym for "Application Specific Integrated Circuit". ASICs are silicon chips specifically designed to
+                  do a single task. In the case of bitcoin, they are designed to process SHA-256 hashing problems to mine new bitcoins.
+                  </p>
+              </div>
+
+              <hr class="featurette-divider">
+              <div class="featurette" id="indexb">
+                <h2><b>BaaS</b></h2>
+                <p>A relatively new term for 2016, coined by William Mougayar of Virtual Capital Ventures in early 2015. It means Blockchain-as-a-Service. Equivalent terms include Ethereum Blockchain-as-a-Service (EthBaaS), or “Blockchain-as-a-Platform” (BaaP). It refers to the growing landscape of services based around blockchain technology. The best example of this we have so far is Microsoft launching its own EthBaaS on the Microsoft Azure cloud platform this year. This platform will allow companies to begin working with blockchain technology without having to first make significant investments in hardware.</p>
+
+                <h2><b>Bitcoin (uppercase)</b></h2>
+                <p itemprop="description">The well known cryptocurrency, based on the proof-of-work blockchain.<br />
+                </p>
+
+                <h2><b>bitcoin (lowercase)</b></h2>
+                <p itemprop="description">The specific collection of technologies used by Bitcoin’s ledger, a particular solution. Note that the currency is
+                  itself one of these technologies, as it provides the miners with the incentive to mine. <br />
+                </p>
+
+                <h2><b>Blockchain</b></h2>
+                <p itemprop="description">A blockchain is a type of <a href="http://www.blockchaintechnologies.com/blockchain-definition#distributed-ledger"
+                    title="Distributed Ledger Definition">distributed ledger</a>, comprised of unchangable, digitally recorded data in
+                  packages called blocks (rather like collating them on to a single sheet of paper). Each block is then ‘chained’ to
+                  the next block, using a cryptographic signature. This allows block chains to be used like a ledger, which can be
+                  shared and accessed by anyone with the appropriate permissions.<br />
+                </p>
+
+                <h2><b>Block Height</b></h2>
+                <p itemprop="description">Block height refers to the number of blocks connected together in the block chain. For example, <i>Height 0</i>, would
+                  be the very first block, which is also called the <i>Genesis Block</i>.<br />
+                </p>
+
+                <h2><b>Block Reward</b></h2>
+                <p itemprop="description">The reward given to a miner which has successfully hashed a transaction block. Block rewards can be a mixture of coins
+                  and transaction fees, depending on the policy used by the cryptocurrency in question, and whether all of the coins
+                  have already been successfully mined. The current block reward for the Bitcoin network is 25 bitcoins for each block.<br
+                  />
+                </p>
+              </div>
+
+              <hr class="featurette-divider">
+              <div class="featurette" id="indexc">
+                <h2><b>Central Ledger</b></h2>
+                <p itemprop="description">A central ledger refers to a ledger maintained by a central agency. <br />
+                </p>
+
+                <h2><b>Confirmation</b></h2>
+                <p itemprop="description">A confirmation means that the blockchain transaction has been verified by the network. This happens through a process
+                  known as mining, in a proof-of-work system (e.g. Bitcoin). Once a transaction is <i>confirmed</i>, it cannot be reversed
+                  or double spent. The more confirmations a transaction has, the harder it becomes to perform a double spend attack.<br
+                  />
+                </p>
+
+                <h2><b>Consensus Process</b></h2>
+                <p itemprop="description">The process a group of peers responsible for maintaining a distributed ledger use to reach consensus on the ledger’s
+                  contents. <br />
+                </p>
+
+                <h2><b>Consensus Point</b></h2>
+                <p itemprop="description">A point – either in time, or defined in terms of a set number or volume of records to be added to the ledger – where
+                  peers meet to agree the state of the ledger.<br />
+                </p>
+
+                <h2><b>Crowdfunding</b></h2>
+                <p>There are two types of crowdfunding: rewards-based crowdfunding and equity-based crowdfunding. The first relates to platforms like Kickstarter or Indiegogo, where startups raise pledges and in return offer buy-in incentives for anything they produce. Equity crowdfunding is a more recent phenomenon where pledgers are actually investors that receive a small share in the business in return for their contributions.</p>
+
+                <h2><b>Cryptocurrency</b></h2>
+                <p itemprop="description">A form of digital currency based on mathematics, where encryption techniques are used to regulate the generation of
+                  units of currency and verify the transfer of funds. Furthermore, cryptocurrencies operate independently of a central
+                  bank.<br />
+                </p>
+              </div>
+
+              <hr class="featurette-divider">
+              <div class="featurette" id="indexd">
+                <h2><b>Digital Commodity</b></h2>
+                <p itemprop="description">A digital commodity is a scarce, electronically transferrable, intangible, with a market value.<br />
+                </p>
+
+                <h2><b>Digital Identity</b></h2>
+                <p itemprop="description">A digital identity is an online or networked identity adopted or claimed in cyberspace by an individual, organization,
+                  or electronic device.<br />
+                </p>
+
+                <h2><b>Digital native</b></h2>
+                <p>A digital native refers to a person who has grown up with the availability, and use of, digital technology. This group includes millennials, or post-millennials AKA Generation Z.</p>
+
+                <h2><b>Digital wallet</b></h2>
+                <p>This refers to any electronic device or application that allows an individual to make electronic transactions. This can be either using cryptocurrency or real money which is often pre-loaded onto a digital account.</p>
+
+                <h2><b>DRaaS</b></h2>
+                <p>This is a term that has emerged in the area of cyber security and means Disaster Recovery-as-a-Service. It refers to the hosting of physical or virtual servers by a third party as a security measure to protect a business’ infrastructure in case of a cyber attack, natural disaster, or man-made catastrophe.</p>
+
+                <h2><b>Distributed Ledger</b></h2>
+                <p itemprop="description">Distributed ledgers are a type of database that are spread across multiple sites, countries or institutions. Records
+                  are stored one after the other in a continuous ledger. Distributed ledger data can be either "permissioned" or "unpermissioned"
+                  to control who can view it. <br />
+                </p>
+
+                <h2><b>Difficulty</b></h2>
+                <p itemprop="description">Difficulty, in Proof-of-Work mining, is how hard it is to verify blocks in a blockchain network. In the Bitcoin network,
+                  the difficulty of mining adjusts verifying blocks every 2016 blocks. This is to keep block verification time at ten
+                  minutes.<br />
+                </p>
+
+                <h2><b>Double Spend</b></h2>
+                <p itemprop="description">Double spend refers to a scenario, in the Bitcoin network, where someone tries to send a bitcoin transaction to two
+                  different recipients at the same time. However, once a bitcoin transaction is confirmed, it makes it nearly impossible
+                  to double spend it. The more confirmations that a particular transaction has, the harder it becomes to double spend
+                  the bitcoins.<br />
+                </p>
+
+              </div>
+
+              <hr class="featurette-divider">
+              <div class="featurette" id="indexe">
+                <h2><b>Ethereum</b></h2>
+                <p>Ethereum is a blockchain-based cryptocurrency platform that runs Smart contracts. Its was originally authored by Vitalik Buterin and Gavin Wood.</p>
+
+                <h2><b>Ether</b></h2>
+                <p>The currency unit of Ethereum. It is used to pay for computational services on the Ethereum network.</p>
+              </div>
+
+              <hr class="featurette-divider">
+              <div class="featurette" id="indexf">
+
+              </div>
+
+              <hr class="featurette-divider">
+              <div class="featurette" id="indexg">
+                <h2><b>Genesis Block</b></h2>
+                <p itemprop="description">The very first block in a block chain.<br />
+                </p>
+
+              </div>
+
+              <hr class="featurette-divider">
+              <div class="featurette" id="indexh">
+                <h2><b>Halving</b></h2>
+                <p itemprop="description">Bitcoins have a finite supply, which makes them a scarce digital commodity. The total amount of bitcoins that will
+                  ever be issued is 21 million. The number of bitcoins generated per block is decreased 50% every four years. This
+                  is called “halving.” The final halving will take place in the year 2140.<br />
+                </p>
+
+                <h2><b>Hashrate</b></h2>
+                <p itemprop="description">The number of hashes that can be performed by a bitcoin miner in a given period of time (usually a second).<br />
+                </p>
+
+              </div>
+
+              <hr class="featurette-divider">
+              <div class="featurette" id="indexi">
+                <h2><b>Internet of Things</b></h2>
+                <p>Internet of Things (IoT) refers to the development of everyday internet-connected objects that have the ability to record, receive, and send data. This covers internet-connected cars, light bulbs, fridges, clothes, pedometers, and everything in between.</p>
+
+              </div>
+
+              <hr class="featurette-divider">
+              <div class="featurette" id="indexj">
+
+              </div>
+
+              <hr class="featurette-divider">
+              <div class="featurette" id="indexk">
+
+              </div>
+
+              <hr class="featurette-divider">
+              <div class="featurette" id="indexl">
+                <h2><b>Ledger</b></h2>
+                <p itemprop="description">An append-only record store, where records are immutable and may hold more general information than financial records.
+                  <br />
+                </p>
+
+                <h2><b>Litecoin</b></h2>
+                <p itemprop="description">A peer-to-peer cryptocurrency based on the Scrypt proof-of-work network. Sometimes referred to as the <i>silver of bitcoin's gold</i>.
+                  <br />
+                </p>
+
+              </div>
+
+              <hr class="featurette-divider">
+              <div class="featurette" id="indexm">
+                <h2><b>Mining</b></h2>
+                <p itemprop="description">The process by which transactions are verified and added to a blockchain. This process of solving cryptographic problems
+                  using computing hardware also triggers the release of cryptocurrencies. <br />
+                </p>
+
+                <h2><b>Multi Signature</b></h2>
+                <p itemprop="description">Multi-signature (<i>multisig</i>) addresses allow multiple parties to require more than one key to authorize a transaction.
+                  The needed number of signatures is agreed at the creation of the address. Multi signature addresses have a much greater
+                  resistance to theft.<br />
+                </p>
+
+              </div>
+
+              <hr class="featurette-divider">
+              <div class="featurette" id="indexn">
+
+              </div>
+
+              <hr class="featurette-divider">
+              <div class="featurette" id="indexo">
+                <h2><b>Off-Ledger Currency</b></h2>
+                <p itemprop="description">A currency minted off-ledger and used on-ledger. An example of this would be using distributed ledgers to manage a
+                  national currency.<br />
+                </p>
+
+                <h2><b>On-Ledger Currency</b></h2>
+                <p itemprop="description"> A currency minted on-ledger and used on-ledger. An example of this would be the cryptocurrency, Bitcoin.<br />
+                </p>
+
+              </div>
+
+              <hr class="featurette-divider">
+              <div class="featurette" id="indexp">
+                <h2><b>P2P</b></h2>
+                <p itemprop="description">Peer-to-peer (<i>P2P</i>) refers to the decentralized interactions that happen between at least two parties in a highly
+                  interconnected network. P2P participants deal directly with each other through a single mediation point.
+                  <br />
+                </p>
+
+                <h2><b>Participant</b></h2>
+                <p itemprop="description">An actor who can access the ledger: read records or add records to. <br />
+                </p>
+
+                <h2><b>Peer</b></h2>
+                <p itemprop="description">An actor that shares responsibility for maintaining the identity and integrity of the ledger. <br />
+                </p>
+
+                <h2><b>Permissioned Ledger</b></h2>
+                <p itemprop="description">A permissioned ledger is a ledger where actors must have permission to access the ledger. Permissioned ledgers may
+                  have one or many owners. When a new record is added, the ledger’s integrity is checked by a limited consensus process.
+                  This is carried out by trusted actors — government departments or banks, for example — which makes maintaining a
+                  shared record much simpler that the consensus process used by unpermissioned ledgers. Permissioned block chains provide
+                  highly-verifiable data sets because the consensus process creates a digital signature, which can be seen by all parties.
+                  A permissioned ledger is usually faster than an unpermissioned ledger.<br />
+                </p>
+
+                <h2><b>Private Currency</b></h2>
+                <p itemprop="description">A currency issued by a private individual or firm, typically secured against uninsured assets. <br />
+                </p>
+
+                <h2><b>Private Key</b></h2>
+                <p itemprop="description">A private key is a string of data that shows you have access to bitcoins in a specific wallet. Private keys can be
+                  thought of as a password; private keys must never be revealed to anyone but you, as they allow you to spend the bitcoins
+                  from your bitcoin wallet through a cryptographic signature.<br />
+                </p>
+
+                <h2><b>Proof-of-Stake</b></h2>
+                <p itemprop="description">An alternative to the proof-of-work system, in which your existing stake in a cryptocurrency (the amount of that currency
+                  that you hold) is used to calculate the amount of that currency that you can mine.<br />
+                </p>
+
+                <h2><b>Proof-of-Work</b></h2>
+                <p itemprop="description">A system that ties mining capability to computational power. Blocks must be hashed, which is in itself an easy computational
+                  process, but an additional variable is added to the hashing process to make it more difficult. When a block is successfully
+                  hashed, the hashing must have taken some time and computational effort. Thus, a hashed block is considered proof
+                  of work.<br />
+                </p>
+
+              </div>
+
+              <hr class="featurette-divider">
+              <div class="featurette" id="indexq">
+
+              </div>
+
+              <hr class="featurette-divider">
+              <div class="featurette" id="indexr">
+                <h2><b>Ripple</b></h2>
+                <p itemprop="description">A payment network built on distributed ledgers that can be used to transfer any currency. The network consists of payment
+                  nodes and gateways operated by authorities. Payments are made using a series of IOUs, and the network is based on
+                  trust relationships.<br />
+                </p>
+
+                <h2><b>Replicated Ledger</b></h2>
+                <p itemprop="description">A ledger with one master (authoritative) copy of the data, and many slave (non-authoritative) copies.<br />
+                </p>
+              </div>
+
+              <hr class="featurette-divider">
+              <div class="featurette" id="indexs">
+                <h2><b>SaaS</b></h2>
+                <p>The means Software-as-a-Service. It is a software distribution model used my many fintech software startups. It basically means applications  that are hosted by the vendor on the cloud and can be accessed by the users online for a subscription fee, as opposed to users buying the software outright in a hard format like a CD.</p>
+
+                <h2><b>Scrypt</b></h2>
+                <p itemprop="description">An alternative proof of work system to SHA-256, designed to be particularly friendly to CPU and GPU miners, while offering
+                  little advantage to ASIC miners.<br />
+                </p>
+
+                <h2><b>SHA 256</b></h2>
+                <p itemprop="description">The cryptographic function used as the basis for bitcoin’s proof of work system.<br />
+                </p>
+
+                <h2><b>Smart Contracts</b></h2>
+                <p itemprop="description">Smart contracts are contracts whose terms are recorded in a computer language instead of legal language. Smart contracts
+                  can be automatically executed by a computing system, such as a suitable distributed ledger system.<br />
+                </p>
+              </div>
+
+              <hr class="featurette-divider">
+              <div class="featurette" id="indext">
+                <h2><b>Tokenless Ledger</b></h2>
+                <p itemprop="description">A tokenless ledger refers to a distributed ledger that doesn’t require a native currency to operate.<br />
+                </p>
+
+                <h2><b>Transaction Block</b></h2>
+                <p itemprop="description">A collection of transactions on the bitcoin network, gathered into a block that can then be hashed and added to the
+                  blockchain.<br />
+                </p>
+
+                <h2><b>Transaction Fee</b></h2>
+                <p itemprop="description">A small fee imposed on some transactions sent across the bitcoin network. The transaction fee is awarded to the miner
+                  that successfully hashes the block containing the relevant transaction.<br />
+                </p>
+              </div>
+
+              <hr class="featurette-divider">
+              <div class="featurette" id="indexu">
+                <h2><b>Unpermissioned ledgers</b></h2>
+                <p itemprop="description">Unpermissioned ledgers such as Bitcoin have no single owner — indeed, they cannot be owned. The purpose of an unpermissioned
+                  ledger is to allow anyone to contribute data to the ledger and for everyone in possession of the ledger to have identical
+                  copies. This creates censorship resistance, which means that no actor can prevent a transaction from being added
+                  to the ledger. Participants maintain the integrity of the ledger by reaching a consensus about its state<br />
+                </p>
+              </div>
+
+              <hr class="featurette-divider">
+              <div class="featurette" id="indexv">
+
+              </div>
+
+              <hr class="featurette-divider">
+              <div class="featurette" id="indexw">
+
+              </div>
+
+              <hr class="featurette-divider">
+              <div class="featurette" id="indexx">
+
+              </div>
+
+              <hr class="featurette-divider">
+              <div class="featurette" id="indexy">
+
+              </div>
+
+              <hr class="featurette-divider">
+              <div class="featurette" id="indexz">
+
+              </div>
+
+              </div>
 					</div>
 
 					<div id="tab7">
