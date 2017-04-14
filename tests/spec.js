@@ -29,8 +29,8 @@ module.exports = {
       'Industry Articles',
       'Technical Articles',
       'Glossary',
-      'Code Spikes',
-      'Implementation'
+      'Implementation',
+      'Code Spikes'
     );
 
     reqNavLinks.forEach(function(navLink) {
@@ -38,10 +38,14 @@ module.exports = {
     });
   },
 
-  'Test for Implementation click': function(client) {
+  'Test for Implementation link': function(client) {
+    client.expect.element('Implementation', 'link text').to.be.present;
+  },
+
+  'Test for Implementation link click': function(client) {
     client.click('link text', 'Implementation');
     client.expect
-      .element('h2', 'css selector')
+      .element('#tab7 h2', 'css selector')
       .text.to.contain('Implementation');
   }
 };
