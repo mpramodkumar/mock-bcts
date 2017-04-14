@@ -39,8 +39,6 @@ module.exports = {
   'Test for Industry players tab click': function (client) {
     client.click('link text', 'Industry Players');
     client.expect.element('#tab2 h2', 'css selector').text.to.contain('Industry Players');
-    client.expect.element('#tab2 h3', 'css selector').text.to.contain('PrimeRevenue');
-    client.expect.element('#tab2 h4', 'css selector').text.to.contain('Maybank');
   }
 
 }
