@@ -30,6 +30,18 @@ module.exports = {
     reqNavLinks.forEach(function (navLink) {                               
       client.expect.element(navLink, 'link text').to.be.present;
     }); 
-  }
+  },
+
+
+  // Test Case for Industry Articles
+ 'Test for Industry Articles tab': function (client) {
+   client.expect.element('Industry Articles', 'link text').to.be.present;
+ },
+
+ 'Test for Industry Articles tab click': function (client) {
+   client.click('link text', 'Industry Articles');
+   client.expect.element('#tab4 h2', 'css selector').text.to.contain('Industry Articles');
+   client.expect.element('#tab4 p', 'css selector').text.to.contain('Supply Chain Overview:');
+ }
 
 }
