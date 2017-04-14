@@ -41,6 +41,11 @@ module.exports = {
    client.expect.element('#tab6 h2', 'css selector').text.to.contain('Glossary');
   },
 
+  'Test for Competitive Analysis tab click': function (client) {
+    client.click('link text', 'Competitive Analysis');
+    client.expect.element('#tab3 h2', 'css selector').text.to.contain('Competitive Analysis');
+  },
+
   'Test for Industry Players tab': function (client) {
     client.expect.element('Industry Players', 'link text').to.be.present;
   },
