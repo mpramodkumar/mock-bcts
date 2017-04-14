@@ -30,6 +30,15 @@ module.exports = {
     reqNavLinks.forEach(function (navLink) {                               
       client.expect.element(navLink, 'link text').to.be.present;
     }); 
+  },
+
+  'Test for Competitive Analysis tab click': function (client) {
+    client.click('link text', 'Competitive Analysis');
+    client.expect.element('#tab3 h2', 'css selector').text.to.contain('Competitive Analysis');
+  },
+
+  'check first column of catable contains Prime Revenue competitor': function (browser) {
+    browser.assert.containsText(".catable thead tr th:nth-child(2)", "Prime Revenue")
   }
 
 }
