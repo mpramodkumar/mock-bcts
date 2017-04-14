@@ -30,6 +30,17 @@ module.exports = {
     reqNavLinks.forEach(function (navLink) {                               
       client.expect.element(navLink, 'link text').to.be.present;
     }); 
+  },
+
+  'Test for Industry Players tab': function (client) {
+    client.expect.element('Industry Players', 'link text').to.be.present;
+  },
+
+  'Test for Industry players tab click': function (client) {
+    client.click('link text', 'Industry Players');
+    client.expect.element('#tab2 h2', 'css selector').text.to.contain('Industry Players');
+    client.expect.element('#tab2 h3', 'css selector').text.to.contain('PrimeRevenue');
+    client.expect.element('#tab2 h4', 'css selector').text.to.contain('Maybank');
   }
 
 }
