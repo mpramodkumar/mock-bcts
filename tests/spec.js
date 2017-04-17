@@ -87,9 +87,7 @@ module.exports = {
 
   'Test for Implementation link click': function(client) {
     client.click('link text', 'Implementation');
-    client.expect
-      .element('#tab7 h2', 'css selector')
-      .text.to.contain('Implementation');
+    client.expect.element('#tab7 h2', 'css selector').text.to.contain('Implementation');
   }
   
 }
