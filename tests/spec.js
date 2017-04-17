@@ -56,7 +56,6 @@ module.exports = {
     client.expect.element('Industry Players', 'link text').to.be.present;
   },
 
-
   'Test for Industry players tab click': function (client) {
     client.click('link text', 'Industry Players');
     client.expect.element('#tab2 h2', 'css selector').text.to.contain('Industry Players');
@@ -81,6 +80,15 @@ module.exports = {
    client.expect.element('#tab4 h2', 'css selector').text.to.contain('Industry Articles');
   },
 
+  'Test for Overview tab': function (client) {
+    client.expect.element('Overview', 'link text').to.be.present;
+  },
+
+  'Test for Overview tab click': function (client) {
+    client.click('link text', 'Overview');
+    client.expect.element('#tab1 h2', 'css selector').text.to.contain('Overview');
+  },
+
   'Test for Implementation link': function(client) {
     client.expect.element('Implementation', 'link text').to.be.present;
   },
@@ -89,6 +97,6 @@ module.exports = {
     client.click('link text', 'Implementation');
     client.expect.element('#tab7 h2', 'css selector').text.to.contain('Implementation');
   }
-  
+
 }
 
