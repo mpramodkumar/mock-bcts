@@ -34,6 +34,7 @@ table.catable {
 
 .catable tbody th {
   color: #fff;
+  text-align: center;
   text-shadow: 1px 1px 1px #096A9F;
   background-color: #096A9F;
   border: 1px solid #096A9F;
@@ -50,7 +51,7 @@ table.catable {
 
 .catable tbody td {
   padding: 10px;
-  text-align: center;
+  text-align: left;
   background-color: #DEF3CA;
   border: 2px solid #E7EFE0;
   -moz-border-radius: 2px;
