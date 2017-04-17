@@ -1,37 +1,43 @@
 module.exports = {
+  tags: [
+    'blockchain',
+    'bcts',
+    'trade',
+    'supply chain finance',
+    'decentralized app',
+  ],
 
-  tags: ['blockchain', 'bcts', 'trade', 'supply chain finance', 'decentralized app'],
-
-  before: function (browser) {
-    console.log("Setting up...");
-    browser.url("http://localhost:3000");
+  before: function(browser) {
+    console.log('Setting up...');
+    browser.url('http://localhost:3000');
   },
 
-  after: function (browser) {
-    browser.end()
-    console.log("Closing down...");
+  after: function(browser) {
+    browser.end();
+    console.log('Closing down...');
   },
 
-  'body visible': function (client) {
+  'body visible': function(client) {
     client.waitForElementVisible('body', 5000);
   },
 
-  'has all the required links in left nav': function (client) {
-    var reqNavLinks = new Array("Overview",
-                                "Industry Players",
-                                "Competitive Analysis",
-                                "Industry Articles",
-                                "Technical Articles",
-                                "Glossary",
-                                "Code Spikes",
-                                "Implementation"
-                                );
+  'has all the required links in left nav': function(client) {
+    var reqNavLinks = new Array(
+      'Overview',
+      'Industry Players',
+      'Competitive Analysis',
+      'Industry Articles',
+      'Technical Articles',
+      'Glossary',
+      'Implementation',
+      'Code Spikes'
+    );
 
-    reqNavLinks.forEach(function (navLink) {
+    reqNavLinks.forEach(function(navLink) {
       client.expect.element(navLink, 'link text').to.be.present;
-    }); 
+    });
   },
-  
+ 
   'Test for Glossary': function (client) {
    client.expect.element('Glossary', 'link text').to.be.present;
   },
@@ -72,7 +78,6 @@ module.exports = {
  'Test for Industry Articles tab click': function (client) {
    client.click('link text', 'Industry Articles');
    client.expect.element('#tab4 h2', 'css selector').text.to.contain('Industry Articles');
-   
   },
 
   'Test for Overview tab': function (client) {
@@ -82,5 +87,16 @@ module.exports = {
   'Test for Overview tab click': function (client) {
     client.click('link text', 'Overview');
     client.expect.element('#tab1 h2', 'css selector').text.to.contain('Overview');
+  },
+
+  'Test for Implementation link': function(client) {
+    client.expect.element('Implementation', 'link text').to.be.present;
+  },
+
+  'Test for Implementation link click': function(client) {
+    client.click('link text', 'Implementation');
+    client.expect.element('#tab7 h2', 'css selector').text.to.contain('Implementation');
   }
+
 }
+
