@@ -35,6 +35,7 @@ table.catable {
 .catable tbody th {
   color: #fff;
   text-align: center;
+  width: 19% !important;
   text-shadow: 1px 1px 1px #096A9F;
   background-color: #096A9F;
   border: 1px solid #096A9F;
