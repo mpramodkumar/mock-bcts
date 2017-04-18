@@ -6,7 +6,8 @@
 		<title>Mock BCTS</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="shortcut icon" href="/images/favicon.ico">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -15,11 +16,14 @@
 		<!-- Custom styles for table -->
 		<link rel="stylesheet" href="/stylesheets/table.css">
 
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 		<script>
 			$(document).ready(function () {
 				$('div[id^=tab]').hide();
 				$('#tab1').show();
 				$('#tabs a').click(function () {
+					$( "#dialogreact" ).dialog( "close" );
+					$( "#dialog" ).dialog( "close" );
 					scrollToTop();
 					var tab_id = $(this).attr('data-section');
 					$('div[id^=tab]').hide();
@@ -42,6 +46,52 @@
 					offsetTop = offset.top;
 					$('html, body').animate({ scrollTop: offsetTop }, 500, 'linear');
 				}
+
+				$( "#dialog" ).dialog({
+					resize:false,
+		      autoOpen: false,
+					modal: true,
+					width:600,
+					height:400,
+					title:'Ethereum',
+					show: {
+		        effect: "blind",
+		        duration: 10
+		      },
+					close: function( event, ui ) {
+						$('.scroll-top-wrapper').addClass('show');
+						$('body').removeAttr('style');
+					}
+		    });
+
+       $( "#ethereumLink" ).on( "click", function() {
+				   $('.scroll-top-wrapper').removeClass('show');
+					 $('body').attr('style','overflow:hidden;');
+           $( "#dialog" ).dialog( "open" );
+        });
+
+			$( "#reactLink" ).on( "click", function() {
+				 $('.scroll-top-wrapper').removeClass('show');
+				 $('body').attr('style','overflow:hidden;');
+         $( "#dialogreact" ).dialog( "open" );
+       });
+
+			$( "#dialogreact" ).dialog({
+					resize:false,
+		      autoOpen: false,
+					modal: true,
+					width:600,
+					height:400,
+					title:'React',
+					show: {
+		        effect: "blind",
+		        duration: 10
+		      },
+					close: function( event, ui ) {
+						$('.scroll-top-wrapper').addClass('show');
+						$('body').removeAttr('style');
+					}
+		    });
 			});
 		</script>
 	</head>
@@ -381,12 +431,16 @@
 						transaction), is cryptographically hashed. The blocks of hashed data draw upon the previous-block (which came before it) in the chain, ensuring all data in the overall "blockchain" has not been tampered with and remains unchanged
 					</p>
 					<p>
-						<b>Technical Scopes</b><br><br> Distributed databases / Storage
-						<br>Distributed file systems - IPFS – Inter planetary file systems
-						<br>Peer-to-peer network communication<br> Cryptography
-						<br>CQRS
-						<br>DDD
-						<br>PAXOS for consensus management<br>
+						<b>Technical Scopes</b><br><br>
+						 <ul>
+							<li>Distributed databases / Storage</li>
+							<li>Distributed file systems - IPFS - Inter planetary file systems</li>
+							<li>Peer-to-peer network communication</li>
+							<li>Cryptography</li>
+							<li>CQRS</li>
+							<li>DDD</li>
+							<li>PAXOS for consensus management</li>
+					  </ul><br>
 					</p>
 					<div class="jumbotron">
 						<div class="container text-center">
@@ -408,10 +462,10 @@
 								</div>
 								<div class="pricing-feature-list">
 									<ul class="list-group">
-										<li class="list-group-item"><a target="_blank" href="https://medium.com/mofed/react-redux-architecture-overview-7b3e52004b6e">React With Redux</a></li>
-										<li class="list-group-item"><a target="_blank" href="https://www.javatpoint.com/nodejs-tutorial">Node JS</a></li>
-										<li class="list-group-item"><a target="_blank" href="https://github.com/ethereum/wiki/wiki/Ethereum-Development-Tutorial">Ethereum</a></li>
-										<li class="list-group-item"><a target="_blank" href="https://www.javatpoint.com/expressjs-tutorial">Express JS</a></li>
+										<li class="list-group-item"><a id="reactLink" class="pointer">React</a></li>
+										<li class="list-group-item"><a target="_blank" href="https://dzone.com/refcardz/nodejs">Node JS</a></li>
+										<li class="list-group-item"><a id="ethereumLink" class="pointer">Ethereum</a></li>
+										<li class="list-group-item"><a target="_blank" href="https://expressjs.com/">Express JS</a></li>
 									</ul>
 								</div>
 								<div class="price-table-button-holder">
@@ -432,7 +486,7 @@
 										<li class="list-group-item"><a target="_blank" href="https://docs.docker.com/engine/getstarted/">Docker</a></li>
 										<li class="list-group-item"><a target="_blank" href="https://devcenter.heroku.com/articles/getting-started-with-nodejs#introduction">Heroku</a></li>
 										<li class="list-group-item"><a target="_blank" href="https://circleci.com/docs/1.0/getting-started/">Circle CI</a></li>
-										<li class="list-group-item"><a target="_blank" href="http://www.vogella.com/tutorials/Git/article.html">GIT</a></li>
+										<li class="list-group-item"><a target="_blank" href="https://git-scm.com/">GIT</a></li>
 									</ul>
 								</div>
 								<div class="price-table-button-holder">
@@ -450,8 +504,8 @@
 								</div>
 								<div class="pricing-feature-list">
 									<ul class="list-group">
-										<li class="list-group-item"><a target="_blank" href="https://karma-runner.github.io/1.0/index.html">Karma<a></li>
-														<li class="list-group-item"><a target="_blank" href="https://www.tutorialspoint.com/jasminejs/index.htm">Jasmine</a></li>
+										<li class="list-group-item"><a target="_blank" href="https://karma-runner.github.io/1.0/index.html">Karma</a></li>
+										<li class="list-group-item"><a target="_blank" href="https://jasmine.github.io/">Jasmine</a></li>
 										<li class="list-group-item"><a target="_blank" href="https://code.tutsplus.com/tutorials/an-introduction-to-webdriver-using-the-javascript-bindings--cms-21855">Selenium</a></li>
 										<li class="list-group-item"><a target="_blank" href="https://semaphoreci.com/community/tutorials/getting-started-with-node-js-and-mocha">Mocha</a></li>
 									</ul>
@@ -509,7 +563,7 @@
               <div class="featurette" id="indexa">
 			    <h1><b>A</b></h1></br>
                 <h2><b>Acceptance</b></h2>
-                <p>The beneficiary presents its documents together with a bill of exchange payable at a future date stipulated in the credit. The bank accepts the bill of exchange by signing it, and returns it to the beneficiary. 
+                <p>The beneficiary presents its documents together with a bill of exchange payable at a future date stipulated in the credit. The bank accepts the bill of exchange by signing it, and returns it to the beneficiary.
                   Acceptance of a draft obliges the acceptor to pay it at maturity.</p>
 
                 <h2><b>ACP Countries</b></h2>
@@ -527,7 +581,7 @@
 
                 <h2><b>Advance Payment Guarantee/Bond</b></h2>
                 <p>A guarantee or bond provided by a bank to the buyer. The guarantee/bond undertakes to return to the buyer on behalf of the supplier, usually on demand, downpayments or progress payments made if the supplier fails to complete the contract.</p>
-                
+
                 <h2><b>Advising Bank</b></h2>
                 <p>A bank in the beneficiary’s country – usually a correspondent of the issuing bank – through which the issuing bank communicates the credit to the beneficiary. It may also be asked to confirm and/or pay the credit.</p>
 
@@ -878,7 +932,7 @@
 				<h2><b>Merkel Tree</b></h2>
                 <p itemprop="description">A Merkle tree is a hash based data structure that is a generalization of the hash list. It is a tree structure in which each leaf node is a hash of a block of data, and each non-leaf node is a hash of its children. Typically, Merkle trees have a branching factor of 2, meaning that each node has up to 2 children.<br />
                 </p>
-				
+
                 <h2><b>Mining</b></h2>
                 <p itemprop="description">The process by which transactions are verified and added to a blockchain. This process of solving cryptographic problems
                   using computing hardware also triggers the release of cryptocurrencies. <br />
@@ -902,7 +956,7 @@
                 <h2><b>Nominated Bank</b></h2>
                 <p itemprop="description">A bank designated by the issuing bank to which the beneficiary presents its documents and from which it obtains payment of the credit sum. Depending on the terms of the credit, this may be the issuing bank, the advising bank or some other bank.<br />
                 </p>
-				
+
 				<h2><b>Nonce</b></h2>
                 <p itemprop="description">Number used once (Nuonce) <br />
                 </p>
@@ -1175,5 +1229,34 @@
 			</div>
 		</div>
 
+		<div id="dialog" >
+			<p>
+				<ul>
+					<li><a target="_blank" href="https://github.com/ethereum/wiki/wiki/Ethereum-Development-Tutorial" class="hrefClass" >Ethereum </a> is a open blockchain platform for building decentralized applications.</li><br/>
+					<li><a target="_blank" href="https://solidity.readthedocs.io/en/develop/" class="hrefClass" >Solidity</a> is a contract-oriented, high-level language whose syntax is similar to that of JavaScript and it is designed to target the Ethereum Virtual Machine (EVM).</li><br/>
+					<li><a target="_blank" href="http://developers.blockapps.net/dashboard/quick-starts" class="hrefClass" >Blockapps</a> is the leading provider of Ethereum blockchain development solutions. Our client, written in Haskell, provides a highly scalable Ethereum compliant blockchain with a industry standard RESTful API.</li><br/>
+					<li><a target="_blank" href="https://blog.bigchaindb.com/what-is-bigchaindb-38aff031bf51" class="hrefClass" >BigChainDB</a>  s a scalable blockchain database. It's designed to merge the best of two worlds: the "traditional" distributed database world and the "traditional" blockchain world</li><br/>
+					<li><a target="_blank" href="https://storj.io/index.html" class="hrefClass" >Distributed Decentralized Storage</a> Storj is blockchain-based, end-to-end encrypted, distributed object storage, where only you have access to your data.</li><br/>
+          <li><a target="_blank" href="https://eprint.iacr.org/2015/675.pdf" class="hrefClass" >Cryptography </a> secures the global information infrastructure by encrypting data flows and protecting data from third-party interception.</li><br/>
+					<li><a target="_blank" href="http://truffleframework.com/" class="hrefClass" >Truffle</a> is the most popular development framework for Ethereum with a mission to make your life a whole lot easier.</li><br/>
+			 </ul>
+			</p>
+		</div>
+
+		<div id="dialogreact" >
+			<p>
+				<ul>
+					<li><a target="_blank" href="https://facebook.github.io/react/" class="hrefClass" >React JS</a> is an open-source JavaScript library for building user interfaces. It is maintained by Facebook, Instagram and a community of individual developers and corporations.</li><br/>
+					<li><a target="_blank" href="https://medium.com/mofed/react-redux-architecture-overview-7b3e52004b6e" class="hrefClass" >React With Redux </a>  is a predictable state container for JavaScript apps using client as ReactJS.</li><br/>
+        </ul>
+				<div>
+				<div class="marginLeft"><b>Please find below links about React.</b></div><br/>
+					<div class="marginLeft"><a target="_blank" href="https://app.pluralsight.com/library/courses/react-redux-react-router-es6/" class="hrefClass" >https://app.pluralsight.com/library/courses/react-redux-react-router-es6</a></div></br>
+					<div class="marginLeft"><a target="_blank" href="https://app.pluralsight.com/library/courses/react-fundamentals" class="hrefClass" >https://app.pluralsight.com/library/courses/react-fundamentals</a></div></br>
+					<div class="marginLeft"><a target="_blank" href="https://survivejs.com/webpack/preface/" class="hrefClass" >https://survivejs.com/webpack/preface/</a></div></br>
+					<div class="marginLeft"><a target="_blank" href="https://survivejs.com/react/introduction/" class="hrefClass" >https://survivejs.com/react/introuction</a></div></br>
+				</div>
+			</p>
+		</div>
 	</body>
 </html>

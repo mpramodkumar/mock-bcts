@@ -156,8 +156,17 @@ h1 {
   letter-spacing: -2px;
 }
 .hrefClass{
- color: #337ab7 !important;
+  color: #337ab7 !important;
+  text-decoration: none;
 }
 .pointer{
- cursor: pointer;
+  cursor: pointer;
+  text-decoration: none;
+}
+.marginLeft{
+  margin-left: 2.3em;
+}
+.ui-widget-overlay {
+  background: #1f1f1f !important;
+  opacity: 1.0 !important;
 }
