@@ -59,19 +59,19 @@
 		        duration: 10
 		      },
 					close: function( event, ui ) {
-						$('.scroll-top-wrapper').addClass('show');
+						$('.scroll-top-wrapper').removeAttr('style');
 						$('body').removeAttr('style');
 					}
 		    });
 
        $( "#ethereumLink" ).on( "click", function() {
-				   $('.scroll-top-wrapper').removeClass('show');
+				   $('.scroll-top-wrapper').attr('style','visibility: hidden !important;');
 					 $('body').attr('style','overflow:hidden;');
            $( "#dialog" ).dialog( "open" );
         });
 
 			$( "#reactLink" ).on( "click", function() {
-				 $('.scroll-top-wrapper').removeClass('show');
+				 $('.scroll-top-wrapper').attr('style','visibility: hidden !important;');
 				 $('body').attr('style','overflow:hidden;');
          $( "#dialogreact" ).dialog( "open" );
        });
@@ -88,7 +88,7 @@
 		        duration: 10
 		      },
 					close: function( event, ui ) {
-						$('.scroll-top-wrapper').addClass('show');
+						$('.scroll-top-wrapper').removeAttr('style');
 						$('body').removeAttr('style');
 					}
 		    });
@@ -480,18 +480,19 @@
 					<p>
 						<b>Technical Scopes</b><br><br>
 						 <ul>
-							<li>Distributed databases / Storage</li>
-							<li>Distributed file systems - IPFS - Inter planetary file systems</li>
-							<li>Peer-to-peer network communication</li>
-							<li>Cryptography</li>
-							<li>CQRS</li>
-							<li>DDD</li>
-							<li>PAXOS for consensus management</li>
+							<li><a target="_blank" href="https://www.slideshare.net/Sulemang/distributed-database-system">Distributed databases / Storage </a> is a database in which portions of the database are stored in multiple physical locations and processing is distributed among multiple database nodes.</li><br/>
+							<li><a target="_blank" href="https://www.techopedia.com/definition/1825/distributed-file-system-dfs">Distributed file systems</a> (DFS) is a file system with data stored on a server. The data is accessed and processed as if it was stored on the local client machine.</li><br/>
+							<li><a target="_blank" href="https://www.maxcdn.com/one/visual-glossary/interplanetary-file-system/">Inter planetary file systems</a>​ (IPFS) is a new hypermedia distribution protocol, addressed by content and identities, as opposed to traditional location addressing. IPFS is designed to decentralize the web while simultaneously increasing the speed and security of the Internet.</li><br/>
+							<li><a target="_blank" href="https://www.techopedia.com/definition/25777/peer-to-peer-network-p2p-network">Peer-to-peer network communication </a> is a decentralized communications model in which each party has the same capabilities and either party can initiate a communication session. Unlike the client/server model, in which the client makes a service request and the server fulfills the request, the P2P network model allows each node to function as both a client and server.</li><br/>
+							<li><a target="_blank" href="http://searchsoftwarequality.techtarget.com/definition/cryptography" >Cryptography </a> secures the global information infrastructure by encrypting data flows and protecting data from third-party interception.</li></br>
+							<li><a target="_blank" href="https://martinfowler.com/bliki/CQRS.html">CQRS</a> is an implementation of Command Query Separation principle to the architecture of software. This can maximize performance, scalability, and security. Supports the evolution of the system over time through higher flexibility, and prevent update commands from causing merge conflicts at the domain level.</li><br/>
+							<li><a target="_blank" href="https://www.thoughtworks.com/insights/blog/domain-driven-design-services-architecture">DDD</a> Domain-driven design (DDD) is an approach to developing software for complex needs by deeply connecting the implementation to an evolving model of the core business concepts.</li><br/>
+							<li><a target="_blank" href="https://en.wikipedia.org/wiki/Paxos_(computer_science)">PAXOS </a> is a family of protocols for solving consensus in a network of unreliable processors. Consensus is the process of agreeing on one result among a group of participants. This problem becomes difficult when the participants or their communication medium may experience failures.</li></br>
 					  </ul><br>
 					</p>
 					<div class="jumbotron">
 						<div class="container text-center">
-							<h3 class="page-header">Technologies Used For LaunchPad Project</h3>
+							<h3 class="page-header">Proposed Technologies For LaunchPad Project</h3>
 							<p class="lead"></p>
 						</div>
 					</div>
